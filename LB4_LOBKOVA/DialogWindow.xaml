@@ -1,0 +1,37 @@
+﻿<Window x:Class="LB4_LOBKOVA.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Input Parameters" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Нижний предел -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Lower Limit (a):" Margin="5" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="LowerLimitInput" Margin="5" />
+
+        <!-- Верхний предел -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Upper Limit (b):" Margin="5" VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="UpperLimitInput" Margin="5" />
+
+        <!-- Число разбиений -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Number of Divisions (N):" Margin="5" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="NumDivisionsInput" Margin="5" />
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="OK" Width="100" Margin="5" Click="OkButton_Click" />
+            <Button Content="Cancel" Width="100" Margin="5" Click="CancelButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
